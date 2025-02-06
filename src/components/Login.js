@@ -21,7 +21,7 @@ const Login = () => {
     
         try {
             const response = await axios.post(
-                "http://localhost:8000/",
+                "https://claim-managmen-1.onrender.com/",
                 {
                     id: policyholderId,
                     password: password,
@@ -32,6 +32,7 @@ const Login = () => {
                     },
                 }
             );
+            
     
             const result = response.data;
             if (result === 123) {

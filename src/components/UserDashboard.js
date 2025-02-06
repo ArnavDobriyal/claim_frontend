@@ -27,7 +27,7 @@ function App() {
     try {
       const response = await axios({
         method,
-        url: `http://localhost:8000${endpoint}`,
+        url: `https://claim-managmen-1.onrender.com${endpoint}`,
         data,
         headers: {
           "api-key": "12345"  // Replace with your actual API key
@@ -38,7 +38,7 @@ function App() {
       setResponse(error.toString());
     }
   };
-
+  
   return (
     <div>
       <h1>Insurance Dashboard</h1>

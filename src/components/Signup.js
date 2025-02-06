@@ -38,18 +38,19 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/signup/",
+        "https://claim-managmen-1.onrender.com/signup/",
         {
-          name,
-          email,
-          password,
+            name,
+            email,
+            password,
         },
         {
-          headers: {
-            "api-key": "12345",
-          },
+            headers: {
+                "api-key": "12345",
+            },
         }
-      );
+    );
+    
 
       setSignupData(response.data);
       setMessage("Signup successful! Here is your data:");
