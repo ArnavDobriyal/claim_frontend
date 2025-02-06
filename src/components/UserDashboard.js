@@ -12,7 +12,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [createPolicyholderResponse, setCreatePolicyholderResponse] = useState(null);
+
   const [updatePolicyholderResponse, setUpdatePolicyholderResponse] = useState(null);
   const [createPolicyResponse, setCreatePolicyResponse] = useState(null);
   const [createClaimResponse, setCreateClaimResponse] = useState(null);
@@ -43,14 +43,6 @@ function App() {
     <div>
       <h1>Insurance Dashboard</h1>
 
-      <div>
-        <h3>Create Policyholder</h3>
-        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={() => handleButtonClick("POST", "/policyholders/", { name, email, password }, setCreatePolicyholderResponse)}>Create Policyholder</button>
-        <pre>{createPolicyholderResponse ? JSON.stringify(createPolicyholderResponse, null, 2) : "No response yet"}</pre>
-      </div>
 
       <div>
         <h3>Update Policyholder</h3>
