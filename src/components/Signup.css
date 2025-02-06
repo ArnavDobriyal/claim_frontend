@@ -1,0 +1,44 @@
+.login-container {
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-card {
+    background: #111;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,123,255,0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .login-input {
+    background: #222 !important;
+    border: 1px solid #444 !important;
+    color: #fff !important;
+  }
+  
+  .login-button {
+    background: #007bff !important;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .signup-link {
+    color: #888;
+    margin-top: 20px;
+  }
+  
+  .signup-link a {
+    color: #007bff !important;
+    text-decoration: none;
+  }
