@@ -1,84 +1,79 @@
 /* Login.css */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-  
-  .login-card {
-    background-color: rgb(77, 27, 27);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-  }
-  
-  .login-title {
-    font-size: 2rem;
-    color: #0a0d0f;
-    margin-bottom: 20px;
-  }
-  
-  .login-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    background-color: #f8f9fa;
-    transition: border-color 0.3s ease;
-  }
-  
-  .login-input:focus {
-    border-color: #3498db;
-    outline: none;
-  }
-  
-  .login-button {
-    padding: 12px 20px;
-    background-color: #3498db;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-button:hover {
-    background-color: #2980b9;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: 10px;
-  }
-  
-  .signup-link {
-    margin-top: 20px;
-    font-size: 1rem;
-  }
-  
-  .signup-link a {
-    color: #3498db;
-    text-decoration: none;
-  }
-  
-  .signup-link a:hover {
-    text-decoration: underline;
-  }
-  
+
+/* General styles for the login page */
+.container-fluid {
+  background-color: #280000; /* Light background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff; /* White background for the card */
+  box-shadow: 0px 4px 6px rgba(129, 87, 87, 0.1); /* Subtle shadow effect */
+  border-radius: 8px; /* Rounded corners for the card */
+  padding: 20px;
+  height: 400px;
+  width: 400px;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #641313 ; /* Dark text for the title */
+}
+
+.form-control {
+  border: 1px solid #ccc; /* Light gray border for input fields */
+  border-radius: 4px; /* Rounded corners for input fields */
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: #0071ea; /* Blue border when input is focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle focus shadow effect */
+}
+
+.btn {
+  background-color: #007bff; /* Blue button color */
+  color: #fff; /* White text for the button */
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 4px; /* Rounded corners for the button */
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #000000; /* Darker blue on hover */
+}
+
+.btn:disabled {
+  background-color: #330b0b; /* Gray button when disabled */
+  cursor: not-allowed;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.vh-100 {
+  height: 100vh; /* Full viewport height */
+}
+
+.text-danger {
+  color: rgb(216, 20, 20); /* Red color for error messages */
+}
+
+a {
+  color: #007bff; /* Blue color for the signup link */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover for the signup link */
+}

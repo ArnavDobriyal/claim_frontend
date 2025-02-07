@@ -38,19 +38,14 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "https://claim-managmen-1.onrender.com/signup/",
+        "http://127.0.0.1:8000/signup/",
+        { name, email, password },
         {
-            name,
-            email,
-            password,
-        },
-        {
-            headers: {
-                "api-key": "12345",
-            },
+          headers: {
+            "api-key": "12345"
+          }
         }
-    );
-    
+      );
 
       setSignupData(response.data);
       setMessage("Signup successful! Here is your data:");
@@ -67,42 +62,52 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
-      <div>
+    <div className="signup-container">
+      <div className="signup-card"style={{
+        maxWidth:"1000px",
+        maxHeight:"1000px",
+      }}>
+        <h2>Sign Up</h2>
         <input
           type="text"
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          className="signup-input"
         />
-      </div>
-      <div>
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="signup-input"
         />
-      </div>
-      <div>
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="signup-input"
         />
+        <button onClick={handleSignup} className="signup-button">
+          Sign Up
+        </button>
+        {message && <p className="success-message">{message}</p>}
+        {signupData && (
+          <pre className="json-output">
+            {JSON.stringify(signupData, null, 2)}
+          </pre>
+        )}
+        {error && <p className="error-message">{error}</p>}
+        <p className="link-text">
+          Already have an account?{" "}
+          <Link to="/" className="link">
+            Login here
+          </Link>
+        </p>
       </div>
-      <button onClick={handleSignup}>Sign Up</button>
-      {message && <p>{message}</p>}
-      {signupData && <pre>{JSON.stringify(signupData, null, 2)}</pre>}
-      {error && <p>{error}</p>}
-      <p>
-        Already have an account? <Link to="/">Login here</Link>
-      </p>
     </div>
   );
 };
 
 export default Signup;
-  
