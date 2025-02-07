@@ -26,7 +26,7 @@ function App() {
     try {
       const response = await axios({
         method,
-        url: `http://127.0.0.1:8000/${endpoint}`,
+        url: `https://claim-managmen-1.onrender.com/${endpoint}`,
         data,
         headers: {
           "api-key": "12345"  // Replace with your actual API key

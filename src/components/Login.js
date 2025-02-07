@@ -21,7 +21,7 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/",
+        "https://claim-managmen-1.onrender.com/",
         {
           id: policyholderId,
           password: password,

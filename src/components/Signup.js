@@ -38,7 +38,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/signup/",
+        "https://claim-managmen-1.onrender.com/signup/",
         { name, email, password },
         {
           headers: {
